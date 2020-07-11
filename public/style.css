@@ -17,12 +17,14 @@ body {
 }
 
 nav {
-  background-color: #5793fd;
+  font-family: monospace;
+  text-align: center;
+  background-color: rgb(255, 163, 77);
   color: #ffffff;
   height: 80px;
   padding: 10px;
   line-height: 3;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 a,
@@ -40,8 +42,25 @@ header {
   font-size: 1.5rem;
 }
 
-header h1 {
+header h1, h1 {
+  font-family: monospace;
   transform: skewX(-2deg);
+}
+
+h2 {
+  color: rgb(255, 163, 77);
+  font-family: sans-serif;
+  text-align: center;
+  font-style: italic;
+}
+
+#completeBTN, #continue-btn {
+  background-color:  rgb(255, 163, 77);
+}
+
+#addBTN, #newBTN {
+  background-color: rgb(4, 116, 82);
+
 }
 
 select {
@@ -71,7 +90,7 @@ select:hover {
 
 select:focus {
   border-color: #aaa;
-  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 1px 3px rgb(255, 163, 77);
   box-shadow: 0 0 0 3px -moz-mac-focusring;
   color: #222;
   outline: none;
@@ -96,7 +115,7 @@ input {
 }
 
 .wrapper {
-  background-color: #f2f8ff;
+  background-color: rgb(182, 182, 182);
   padding-bottom: 100px;
 }
 
@@ -367,10 +386,6 @@ form > button {
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
-/* .workout .card {
-  width: 350px;
-} */
 
 .prev-workout button {
   margin: 10px;

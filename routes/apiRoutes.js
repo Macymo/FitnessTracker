@@ -1,6 +1,26 @@
 const Workout = require("../models/workouts.js");
 
 module.exports = function(app) {
+  app.get("/api/workouts", (req, res) => {
+    Workout.find({})
+      .then(dbWorkout => {
+        res.json(dbWorkout);
+      })
+      .catch(err => {
+        res.status(400).json(err);
+      });
+  });
+
+  app.get("/api/workouts/range", (req , res) => {
+    Workout.find({}).limit(7)
+      .then(dbWorkout => {
+        res.json(dbWorkout);
+      })
+      .catch(err => {
+        res.status(400).json(err);
+      });
+  });
+
   app.post("/api/workouts", ({body}, res) => {
     Workout.create(body)
       .then(dbWorkout => {
@@ -23,24 +43,5 @@ module.exports = function(app) {
       res.status(400).json(err);
     });
   });
-
-  app.get("/api/workouts/range", (req , res) => {
-    Workout.find({}).limit(7)
-      .then(dbWorkout => {
-        res.json(dbWorkout);
-      })
-      .catch(err => {
-        res.status(400).json(err);
-      });
-  });
-
-  app.get("/api/workouts", (req, res) => {
-    Workout.find({})
-      .then(dbWorkout => {
-        res.json(dbWorkout);
-      })
-      .catch(err => {
-        res.status(400).json(err);
-      });
-  });
+  
 };
