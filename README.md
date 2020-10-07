@@ -7,6 +7,7 @@ A full stack workout tracking application using Mongo database with Mongoose sch
 
 ## Table of Contents
 
+* [Usage](#usage)
 * [Installation](#installation)
 * [Contributing](#contributing)
 * [Questions](#questions)
@@ -16,9 +17,11 @@ A full stack workout tracking application using Mongo database with Mongoose sch
 ![CardioExercise](CardioExercise.png)
 ![FitnessGraphs](FitnessTrackerGraphs.png)
 
-
 ## Installation
 ``` npm install ```
+
+## Usage
+https://trackingfitness.herokuapp.com
 
 ## Contributing
 Contact Me
